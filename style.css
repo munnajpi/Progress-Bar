@@ -1,0 +1,79 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+body,html{background-color: rgb(103, 123, 123);}
+.container{ width: 700px;
+  height: auto;
+  margin: 10px auto;
+  background-color: rgb(46, 69, 69);
+  padding: 30px 20px;
+}
+.title{
+  text-align: center;
+  font-size: 25px;
+  color: azure;
+}
+
+.skill li{
+  list-style: none;
+  padding: 25px 0;
+  position: relative;
+  color:white;
+}
+
+.skill li::before{ 
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 15px;
+  background-color: rgb(68, 106, 106);
+  left: 0;
+  bottom: 0;
+  border-radius: 20px;
+  box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.75); 
+}
+
+.skill li::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 15px;
+  left: 0;
+  bottom: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.skill li.html::after{
+ animation-name:html ;
+}
+
+.skill li.css::after{
+ animation-name:css ;
+}
+
+.skill li.bootstrap::after{
+ animation-name:bootstrap ;
+}
+
+@keyframes html{
+   to{
+     width:90% ;
+     background-color: rgb(212, 186, 58);
+   }
+}
+
+@keyframes css{
+   to{
+     width:70% ;
+     background-color: rgb(200, 176, 70);
+   }
+}
+
+@keyframes bootstrap{
+   to{
+     width:60% ;
+     background-color: rgb(179, 174, 110);
+   }
+}
